@@ -32,10 +32,10 @@ public class VPackNewLineTest {
     String expectedV2_5_2 = "\"{\\n"
         + "  \\\"description\\\": \\\"String with new line\\\"\\n"
         + "}\"";
+    // com.fasterxml.jackson.databind.ObjectMapper throws Exception with expectedV2_5_3
     String expectedV2_5_3 = "\"{\n"
         + "  \\\"description\\\": \\\"String with new line\\\"\n"
         + "}\"";
-    // jackson throws Exception with expectedV2_5_3
     assertEquals(expectedV2_5_3, parsed);
     assertNotEquals(expectedV2_5_2, parsed);
 
