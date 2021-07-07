@@ -29,13 +29,13 @@ public class VPackNewLineTest {
         + "}";
     VPackSlice vpack = new VPack.Builder().build().serialize(json);
     String parsed = new VPackParser.Builder().build().toJson(vpack);
-    String expectedV2_5_2 = "\"{\\n"
+    String resultV2_5_2 = "\"{\\n"
         + "  \\\"description\\\": \\\"String with new line\\\"\\n"
         + "}\"";
-    String expectedV2_5_3 = "\"{\n"
+    String resultV2_5_3 = "\"{\n"
         + "  \\\"description\\\": \\\"String with new line\\\"\n"
         + "}\"";
-    assertEquals(expectedV2_5_2, parsed);
-    assertNotEquals(expectedV2_5_3, parsed);
+    assertEquals(resultV2_5_2, parsed);
+    assertNotEquals(resultV2_5_3, parsed);
   }
 }
