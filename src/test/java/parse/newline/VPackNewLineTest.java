@@ -48,7 +48,7 @@ public class VPackNewLineTest {
     assertEquals(RESULT_V2_5_3, parsed);
     assertNotEquals(RESULT_V2_5_2, parsed);
 
-    // all '\n' in arangodb have to be replaced with '\\n' for version 2.5.3
+    // replace '\n' with '\\n'
     json = "{\\n"
         + "  \"description\": \"String with new line\"\\n"
         + "}";
